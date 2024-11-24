@@ -34,24 +34,25 @@ export const loginUser = (fields, role) => async (dispatch) => {
 
 export const registerUser = (fields, role) => async (dispatch) => {
     dispatch(authRequest());
+    console.log(process.env.REACT_APP_BACKEND_HOST_URL);
 
     try {
         const result = await axios.post(`${process.env.REACT_APP_BACKEND_HOST_URL}/${role}Reg`, fields, {
-            headers: { 'Content-Type': 'application/json' },
+            'headers': { 'Content-Type': 'application/json' },
         });
+
         if (result.data.schoolName) {
             dispatch(authSuccess(result.data));
-        }
-        else if (result.data.school) {
+        } else if (result.data.school) {
             dispatch(stuffAdded());
-        }
-        else {
+        } else {
             dispatch(authFailed(result.data.message));
         }
     } catch (error) {
-        dispatch(authError(error));
+        dispatch(authError({ message: error.message, code: error.code }));
     }
 };
+
 
 export const logoutUser = () => (dispatch) => {
     dispatch(authLogout());

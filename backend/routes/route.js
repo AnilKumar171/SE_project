@@ -25,6 +25,12 @@ const { subjectCreate, classSubjects, deleteSubjectsByClass, getSubjectDetail, d
 const { teacherRegister, teacherLogIn, getTeachers, getTeacherDetail, deleteTeachers, deleteTeachersByClass, deleteTeacher, updateTeacherSubject, teacherAttendance } = require('../controllers/teacher-controller.js');
 
 // Admin
+
+router.get('/test', (req,res)=>{
+    console.log('ok fine')
+});
+
+
 router.post('/AdminReg', adminRegister);
 router.post('/AdminLogin', adminLogIn);
 
