@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Button, Grid, Box, Typography, Paper, Checkbox, FormControlLabel, TextField, CssBaseline, IconButton, InputAdornment, CircularProgress, Backdrop } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import bgpic from "../assets/designlogin.jpg"
+import bgpic from "../assets/classroom.png"
 import { LightPurpleButton } from '../components/buttonStyles';
 import styled from 'styled-components';
 import { loginUser } from '../redux/userRelated/userHandle';
@@ -77,14 +77,14 @@ const LoginPage = ({ role }) => {
         const password = "zxc"
 
         if (role === "Admin") {
-            const email = "yogendra@12"
+            const email = "anilkumarbangi9441@gmail.com"
             const fields = { email, password }
             setGuestLoader(true)
             dispatch(loginUser(fields, role))
         }
         else if (role === "Student") {
             const rollNum = "1"
-            const studentName = "Dipesh Awasthi"
+            const studentName = "Anil"
             const fields = { rollNum, studentName, password }
             setGuestLoader(true)
             dispatch(loginUser(fields, role))
@@ -265,7 +265,7 @@ const LoginPage = ({ role }) => {
                         backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-                        backgroundSize: 'cover',
+                        backgroundSize: 'contain',
                         backgroundPosition: 'center',
                     }}
                 />

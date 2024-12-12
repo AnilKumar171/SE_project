@@ -22,7 +22,7 @@ import AccountMenu from '../../components/AccountMenu';
 import { AppBar, Drawer } from '../../components/styles';
 
 const StudentDashboard = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const toggleDrawer = () => {
         setOpen(!open);
     };

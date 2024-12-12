@@ -22,9 +22,11 @@ const Logout = () => {
     return (
         <LogoutContainer>
             <h1>{currentUser.name}</h1>
-            <LogoutMessage>Are you sure you want to log out?</LogoutMessage>
+            <LogoutMessage>Are you sure ? Do you want to log out?</LogoutMessage>
+            <div sx={{display :'flex' ,flexDirection:'row'}}>
             <LogoutButtonLogout onClick={handleLogout}>Log Out</LogoutButtonLogout>
             <LogoutButtonCancel onClick={handleCancel}>Cancel</LogoutButtonCancel>
+            </div>
         </LogoutContainer>
     );
 };
@@ -33,6 +35,7 @@ export default Logout;
 
 const LogoutContainer = styled.div`
   border: 1px solid #ccc;
+  height:90vh;
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -52,11 +55,12 @@ const LogoutMessage = styled.p`
 
 const LogoutButton = styled.button`
   padding: 10px 20px;
-  margin-top: 10px;
+  margin: 10px;
   border-radius: 5px;
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+  border:none;
 
   &:hover {
     color: #fff;
