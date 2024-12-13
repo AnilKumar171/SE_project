@@ -10,15 +10,15 @@ const Homepage = () => {
         <StyledContainer>
             <Grid container spacing={0} style={{display: 'flex', justifyContent: 'space-evenly'}}> 
                 <Grid item xs={12} md={6} style= {{display: 'flex', justifyContent: 'center'}}>
-                    <img src={Students} alt="students" style={{width: '100%', height: '100%', objectFit: 'contain' }} />
+                    <img src={Students} alt="students" style={{width: '100%', height: '100%', objectFit: 'cover' }} />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6} style= {{display: 'flex', justifyContent: 'center',alignItems: 'center'}}>
                     <StyledPaper elevation={3}>
                         <StyledTitle> 
-                            Classroom  Management
+                            Classroom  Management System
                         </StyledTitle>
                         <StyledText>
-                            Streamline classroom management, class organization, and add students and faculty.
+                            Classroom management, class organization, and add students and faculty.
                             Seamlessly track attendance, assess performance, and provide feedback.
                             Access records, view marks, and communicate effortlessly.
                         </StyledText>
@@ -30,18 +30,19 @@ const Homepage = () => {
                             </StyledLink>
                             <StyledLink to="/chooseasguest">
                                 <Button variant="outlined" fullWidth
-                                    sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
+                                    sx={{ mt: 0, mb: 0, color: "#7f56da", borderColor: "#7f56da" }}
                                 >
                                     Login as Guest
                                 </Button>
                             </StyledLink>
+                        </StyledBox>
                             <StyledText>
                                 Don't have an account?{' '}
                                 <Link to="/Adminregister" style={{color:"#550080"}}>
                                     Sign up
                                 </Link>
                             </StyledText>
-                        </StyledBox>
+                        
                     </StyledPaper>
                 </Grid>
             </Grid>
@@ -64,33 +65,43 @@ const StyledContainer = styled(Container)`
   height: 100vh;
 `;
 
+
 const StyledPaper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 24px;
-  height: 100vh;
+  height: 85vh;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
 `;
 
 const StyledBox = styled(Box)`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   gap: 16px;
   padding: 24px;
+  width: 100%;
 `;
 
 const StyledTitle = styled.h1`
-  font-size: 3rem;
+  font-size: 32px;
   color: #252525;
   /* font-family: "Manrope"; */
   font-weight: bold;
   padding-top: 0;
   letter-spacing: normal;
   line-height: normal;
+  text-align: center;
 `;
 
 const StyledText = styled.p`
   /* color: #550080; */
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px; 
   letter-spacing: normal;
   line-height: normal;

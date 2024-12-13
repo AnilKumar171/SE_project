@@ -110,6 +110,7 @@ const ChartContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  border-radius:10px;
 `;
 
 const StyledPaper = styled(Paper)`
@@ -120,6 +121,7 @@ const StyledPaper = styled(Paper)`
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  border-radius:30px;
 `;
 
 const Title = styled.p`
