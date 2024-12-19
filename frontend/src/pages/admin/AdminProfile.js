@@ -45,7 +45,7 @@ const AdminProfile = () => {
     }
 
     return (
-        <div>
+        <div sx = {{padding:"20px"}}>
             Name: {currentUser.name}
             <br />
             Email: {currentUser.email}
@@ -53,7 +53,7 @@ const AdminProfile = () => {
             School: {currentUser.schoolName}
             <br />
              <Button variant="contained" color="error" onClick={deleteHandler}>Delete</Button> 
-            <Button variant="contained" sx={styles.showButton}
+            <Button variant="contained" sx={{margin:"10px"}}
                 onClick={() => setShowTab(!showTab)}>
                 {showTab ? <KeyboardArrowUp /> : <KeyboardArrowDown />}{buttonText}
             </Button>
