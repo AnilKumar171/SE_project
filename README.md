@@ -3,7 +3,6 @@
 </h1>
 
 
-[LinkedIn](https://www.linkedin.com/in/tridibesh-misra-729b23229/)
 
 
 ## Features
